@@ -1,10 +1,17 @@
+#Pro-Gamer Logistics
+#Menu hecho por Lautaro Cordoba
+#Inventario hecho por Esteban Jumilla
+#Validaciones hechas por Manuel Dos Ramos y Juan Cruz Gallo
+
+
+
+
+
+
+
+
 import random
-
-# El inventario ya no es una lista de diccionarios.
-# Ahora se usan 6 listas paralelas, alineadas por indice:
-# el producto i es (ids[i], nombres[i], categorias[i], marcas[i], precios[i], stocks[i]).
-
-# marcas_disponibles: catalogo de marcas (se renombro para no chocar con la
+# marcas_disponibles: catalogo de marcas 
 # lista paralela 'marcas' del inventario).
 marcas_disponibles = ["Logitech", "Razer", "Corsair", "Zowie", "ASUS", "HyperX"]
 nombres_monitor  = ["Monitor 24 Full HD ", "Monitor 27 2K 144Hz", "Monitor 32 4K HDR", "Monitor 24 240Hz", "Monitor curvo 34 UltraWide"]
@@ -197,15 +204,12 @@ def indice_categoria(categoria):
     return -1
 
 
-# ─────────────────────────────────────────
+
 #  MOSTRAR INVENTARIO
-# ─────────────────────────────────────────
-
-
 def ordenar_inventario(ids, nombres, categorias, marcas, precios, stocks):
     # metodo de burbuja: compara elementos adyacentes y los intercambia.
     # ordena por stock descendente, desempate alfabetico por nombre.
-    # como ahora son listas paralelas, cada intercambio se hace en las 6 listas
+    # cada intercambio se hace en las 6 listas
     # con el mismo indice para que no se desalineen.
     n = len(ids)
     i = 0
@@ -214,14 +218,14 @@ def ordenar_inventario(ids, nombres, categorias, marcas, precios, stocks):
         while j < n - i - 1:
             cambiar = False
             if stocks[j] < stocks[j + 1]:
-                # stock menor a la izquierda, hay que intercambiar
+                
                 cambiar = True
             elif stocks[j] == stocks[j + 1]:
-                # empate de stock, desempate alfabetico
+                
                 if nombres[j].lower() > nombres[j + 1].lower():
                     cambiar = True
             if cambiar:
-                # intercambio posicion por posicion en las 6 listas
+                
                 temp = ids[j]
                 ids[j] = ids[j + 1]
                 ids[j + 1] = temp
@@ -265,17 +269,15 @@ def mostrar_inventario(ids, nombres, categorias, precios, stocks):
 
 
 def informe_general(ids, nombres, categorias, marcas, precios, stocks):
-    # muestra productos ordenados por stock desc, desempate alfabetico
+    
     if len(ids) == 0:
         print("\n  El inventario esta vacio.\n")
     else:
         ordenar_inventario(ids, nombres, categorias, marcas, precios, stocks)
         mostrar_inventario(ids, nombres, categorias, precios, stocks)
 
-# ─────────────────────────────────────────
-#  AGREGAR PRODUCTO
-# ─────────────────────────────────────────
 
+#  AGREGAR PRODUCTO
 
 def agregar_producto(ids, nombres, categorias, marcas, precios, stocks):
     print("\n-- AGREGAR PRODUCTO ---------------------")
@@ -313,8 +315,7 @@ def agregar_producto(ids, nombres, categorias, marcas, precios, stocks):
                 nombre_base = input("Nombre del producto: ").strip()
 
             if not validar_descripcion(nombre_base):
-                # se llama validar_descripcion() — verifica que no este vacio
-                # y que el primer caracter sea una letra
+               
                 print("  El nombre no puede estar vacio y debe comenzar con una letra.")
             else:
                 print("\nMarcas disponibles:")
@@ -350,7 +351,6 @@ def agregar_producto(ids, nombres, categorias, marcas, precios, stocks):
                             # se llama validar_stock() — verifica que sea entero y mayor o igual a 1
                             print("  Stock invalido.")
                         else:
-                            # alta: se agrega el producto a las 6 listas paralelas (un append en cada una)
                             nuevo_id = generar_id(ids, categoria)
                             nuevo_nombre = marca + " " + nombre_base
                             ids.append(nuevo_id)
@@ -361,9 +361,9 @@ def agregar_producto(ids, nombres, categorias, marcas, precios, stocks):
                             stocks.append(int(stock_str))
                             print("  Producto '" + nuevo_nombre + "' agregado con ID " + str(nuevo_id) + ".\n")
 
-# ─────────────────────────────────────────
+
 #  ELIMINAR PRODUCTO
-# ─────────────────────────────────────────
+
 
 
 def eliminar_producto(ids, nombres, categorias, marcas, precios, stocks):
@@ -378,14 +378,11 @@ def eliminar_producto(ids, nombres, categorias, marcas, precios, stocks):
             if indice == -1:
                 print("  ID no encontrado.")
             else:
-                if stocks[indice] > 0:
-                    # solo se puede eliminar si stock es igual a 0
+                if stocks[indice] > 0: 
                     print("  El producto tiene stock. No se puede eliminar.")
                 else:
-                    # stock es 0, se solicita confirmacion antes de eliminar
                     confirmar = input("  Eliminar '" + nombres[indice] + "'? (s/n): ").strip().lower()
                     if confirmar == "s":
-                        # baja: se saca de las 6 listas con el mismo indice para no desalinearlas
                         ids.pop(indice)
                         nombres.pop(indice)
                         categorias.pop(indice)
@@ -394,13 +391,9 @@ def eliminar_producto(ids, nombres, categorias, marcas, precios, stocks):
                         stocks.pop(indice)
                         print("  Producto eliminado.")
                     else:
-                        # el usuario cancelo la operacion
                         print("  Operacion cancelada.")
 
-# ─────────────────────────────────────────
-#  MODIFICAR STOCK
-# ─────────────────────────────────────────
-
+# Modificar Stock
 
 def modificar_stock(ids, nombres, categorias, precios, stocks):
     print("\n-- MODIFICAR STOCK ----------------------")
@@ -440,10 +433,8 @@ def modificar_stock(ids, nombres, categorias, precios, stocks):
                     stocks[indice] = int(cantidad_str)
                     print("  Stock establecido en: " + str(int(cantidad_str)) + " unidades.\n")
 
-# ─────────────────────────────────────────
-#  MODIFICAR PRECIO
-# ─────────────────────────────────────────
 
+#  MODIFICAR PRECIO
 
 def modificar_precio(ids, nombres, categorias, precios, stocks):
     print("\n-- MODIFICAR PRECIO ---------------------")
@@ -467,16 +458,12 @@ def modificar_precio(ids, nombres, categorias, precios, stocks):
                     precios[indice] = float(precio_str)
                     print("  Precio actualizado a $" + precio_str + ".\n")
 
-# ─────────────────────────────────────────
-#  BUSCAR PRODUCTO
-# ─────────────────────────────────────────
 
+#  BUSCAR PRODUCTO
 
 def buscar_producto(ids, nombres, categorias, marcas, precios, stocks):
     print("\n-- BUSCAR PRODUCTO ----------------------")
     termino = input("Nombre, categoria o marca: ").strip().lower()
-    # como no se puede armar una sublista de productos (eran diccionarios),
-    # se construyen listas paralelas de resultados
     res_ids = []
     res_nombres = []
     res_categorias = []
@@ -496,9 +483,8 @@ def buscar_producto(ids, nombres, categorias, marcas, precios, stocks):
     else:
         mostrar_inventario(res_ids, res_nombres, res_categorias, res_precios, res_stocks)
 
-# ─────────────────────────────────────────
+
 #  MENU PRINCIPAL
-# ─────────────────────────────────────────
 
 def mostrar_menu():
     '''se cambio para que coincida con la consigna, y unificando procesos'''
