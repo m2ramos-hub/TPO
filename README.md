@@ -9,8 +9,7 @@ Bloque  Validaciones:
         Bloque 1 Validaciones de texto: contiene las funciones que verifican que los datos ingresados por el usuario sean    correctos, como el identificador, la descripcion, la categoria y la marca.
 Tambien incluye las funciones de busqueda por ID y por nombre.
  
-        Bloque 2 - Validaciones numericas: verifica que el precio sea un decimal positivo y que el stock 
-        sea un entero mayor o igual a 1. Incluye tambien la generacion de IDs unicos y funciones auxiliares de soporte.
+ Bloque 2 - Validaciones numericas: verifica que el precio sea un decimal positivo y que el stock sea un entero mayor o igual a 1. Incluye tambien la generacion de IDs unicos y funciones auxiliares de soporte.
 
 
 Mostrar inventario: imprime el inventario en formato de tabla alineada. Incluye el ordenamiento por burbuja de mayor a menor stock, con desempate alfabetico por nombre.
