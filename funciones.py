@@ -429,7 +429,7 @@ def modificar_precio(inventario):
     if len(inventario) > 0:
         #Puse el capitalize porque cuando se ingresaba el ID sin la mayuscula se devolvia al menu principal
         id_str = input("ID del producto (salir para cancelar): ").strip().capitalize()
-        if id_str == "salir":
+        if id_str == "Salir":
             print("  Operacion cancelada.")
         else:
             indice = buscar_indice_por_id(inventario, id_str)
