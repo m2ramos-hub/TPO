@@ -337,10 +337,8 @@ def agregar_producto(ids, nombres, categorias, marcas, precios, stocks):
                         stock_str  = input("Stock inicial: ").strip()
 
                         if not validar_precio(precio_str):
-                            # se llama validar_precio() — verifica que sea decimal y estrictamente positivo
                             print("  Precio invalido.")
                         elif not validar_stock(stock_str):
-                            # se llama validar_stock() — verifica que sea entero y mayor o igual a 1
                             print("  Stock invalido.")
                         else:
                             nuevo_nombre = marca + " " + nombre_base
