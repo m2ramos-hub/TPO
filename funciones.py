@@ -471,7 +471,7 @@ def buscar_producto(inventario):
 
 def mostrar_menu():
     '''se cambio para que coincida con la consigna, y unificando procesos'''
-    print("\n" + "=" * 50)
+    print("=" * 50)
     print("   SISTEMA DE GESTION: STOCK-GAMER")
     print("=" * 50)
     print("  1. Registrar nuevo producto (Alta)")
