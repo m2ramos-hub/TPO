@@ -2,6 +2,7 @@ Sistema de Gestión de Inventario: STOCK-GAMER
 
 ¡Bienvenido al Sistema de Gestión de Inventario para Pro-Gamer Logistics! Este es un programa interactivo desarrollado en Python para la terminal que permite administrar de punta a punta un catálogo de productos informáticos orientados al ecosistema gaming.
 El sistema cuenta con un robusto bloque de validaciones nativas (sin librerías externas) para asegurar la integridad de los datos ingresados en el inventario.
+
 🚀 Características Principales
 Altas, Bajas y Modificaciones (ABM):
 Alta: Registro de nuevos productos con generación de ID automático único basado en su categoría. Permite seleccionar nombres y marcas desde un catálogo precargado o ingresar datos 100% personalizados.
