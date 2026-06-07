@@ -1,4 +1,6 @@
 "Pro Gamer Logistics" , Sistema de Gestión de Suministros para Gaming Houses.
+
+
 Conformado por: Manuel Dos Ramos(1239249), Esteban Jumilla (1234464), Juan Cruz Gallo (1235624) y Lautaro Cordoba (1235670).
 
 
