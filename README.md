@@ -12,7 +12,7 @@ Tambien incluye las funciones de busqueda por ID y por nombre.
  Bloque 2 - Validaciones numericas: verifica que el precio sea un decimal positivo y que el stock sea un entero mayor o igual a 1. Incluye tambien la generacion de IDs unicos y funciones auxiliares de soporte.
 
 
-Mostrar inventario: imprime el inventario en formato de tabla alineada. Incluye el ordenamiento por burbuja de mayor a menor stock, con desempate alfabetico por nombre.
+Mostrar inventario: imprime el inventario en formato de tabla alineada. Incluye el ordenamiento por burbuja de mayor a menor stock, con desempate alfabetico por nombre. 
  
 Agregar producto: registra un nuevo producto llamando a todas las validaciones antes de guardarlo en el inventario.
  
@@ -27,4 +27,6 @@ Buscar producto: permite buscar por nombre, categoria o marca mostrando los resu
 Menu principal: coordina el flujo general del programa mostrando las opciones al usuario y derivando a cada funcion segun la
 opcion seleccionada.
 
-La metodologia de trabajo consistio en dividir el desarrollo en roles claros desde el inicio. Las validaciones se separaron en dos partes: un bloque de texto y uno numerico, cada uno con funciones especificas y probadas de forma independiente antes de integrarse al sistema. El resto del codigo, menu y stock, siguio la misma logica modular. Una vez que cada parte estuvo lista y probada, se realizo el merge integrando los bloques y verificando que funcionaran en conjunto. Este enfoque permitio detectar errores de forma aislada y facilito la comprension de cada parte del codigo durante la defensa.
+La metodologia de trabajo consistio en dividir el desarrollo en roles claros desde el inicio. Las validaciones se separaron en dos partes: un bloque de texto y uno numerico, cada uno con funciones especificas y probadas de forma independiente antes de integrarse al sistema. El resto del codigo, menu y stock, siguio la misma logica modular. Una vez que cada parte estuvo lista y probada, se realizo el merge integrando los bloques y verificando que funcionaran en conjunto. Este enfoque permitio detectar errores de forma aislada y facilito la comprension de cada parte del codigo durante la defensa. 
+
+
