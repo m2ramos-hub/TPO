@@ -32,6 +32,4 @@ def main():
         opcion = int(input("  Opcion: "))
     print("\n  Saliendo del sistema. Hasta luego!\n")
 
-# Verifica si el archivo se está ejecutando directamente o si está siendo importado por otro archivo.
-if __name__ == "__main__":
-    main()
+main()
