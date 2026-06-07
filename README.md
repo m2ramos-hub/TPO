@@ -5,10 +5,15 @@ El sistema cuenta con un robusto bloque de validaciones nativas (sin librerías 
 
 🚀 Características Principales
 Altas, Bajas y Modificaciones (ABM):
+
 Alta: Registro de nuevos productos con generación de ID automático único basado en su categoría. Permite seleccionar nombres y marcas desde un catálogo precargado o ingresar datos 100% personalizados.
+
 Baja con reglas de negocio: No se permite eliminar un producto si todavía tiene existencias físicas disponibles en stock.
+
 Modificaciones precisas: Control individual para sumar, restar o establecer el stock exacto (buscando por nombre), y opción para actualizar precios (buscando por ID).
+
 Informe General Avanzado: Muestra todo el inventario estructurado visualmente en forma de tabla alineada por consola. El listado se ordena mediante el algoritmo de ordenamiento de burbuja, priorizando el stock de forma descendente y usando el nombre alfabéticamente como criterio de desempate.
+
 Validaciones Nativas Rigurosas: Control estricto carácter por carácter para asegurar que los precios sean decimales positivos, el stock sea un entero mayor a cero, las marcas cumplan con longitudes mínimas y los nombres de productos comiencen formalmente con letras.
 
 
