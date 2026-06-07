@@ -351,8 +351,8 @@ def eliminar_producto(inventario):
     print("\n-- ELIMINAR PRODUCTO --------------------")
     mostrar_inventario(inventario)
     if len(inventario) > 0:
-        id_str = input("ID del producto a eliminar (salir para cancelar): ").strip()
-        if id_str == "salir":
+        id_str = input("ID del producto a eliminar (salir para cancelar): ").strip().capitalize()
+        if id_str == "Salir":
             print("  Operacion cancelada.")
         else:
             indice = buscar_indice_por_id(inventario, id_str)
