@@ -1,34 +1,30 @@
-Sistema de Gestión de Inventario: STOCK-GAMER
-
-¡Bienvenido al Sistema de Gestión de Inventario para Pro-Gamer Logistics! Este es un programa interactivo desarrollado en Python para la terminal que permite administrar de punta a punta un catálogo de productos informáticos orientados al ecosistema gaming.
-El sistema cuenta con un robusto bloque de validaciones nativas (sin librerías externas) para asegurar la integridad de los datos ingresados en el inventario.
-
-🚀 Características Principales
-Altas, Bajas y Modificaciones (ABM):
-
-Alta: Registro de nuevos productos con generación de ID automático único basado en su categoría. Permite seleccionar nombres y marcas desde un catálogo precargado o ingresar datos 100% personalizados.
-
-Baja con reglas de negocio: No se permite eliminar un producto si todavía tiene existencias físicas disponibles en stock.
-
-Modificaciones precisas: Control individual para sumar, restar o establecer el stock exacto (buscando por nombre), y opción para actualizar precios (buscando por ID).
-
-Informe General Avanzado: Muestra todo el inventario estructurado visualmente en forma de tabla alineada por consola. El listado se ordena mediante el algoritmo de ordenamiento de burbuja, priorizando el stock de forma descendente y usando el nombre alfabéticamente como criterio de desempate.
-
-Validaciones Nativas Rigurosas: Control estricto carácter por carácter para asegurar que los precios sean decimales positivos, el stock sea un entero mayor a cero, las marcas cumplan con longitudes mínimas y los nombres de productos comiencen formalmente con letras.
+"Pro Gamer Logistics" , Sistema de Gestión de Suministros para Gaming Houses.
+Conformado por: Manuel Dos Ramos(1239249), Esteban Jumilla (1234464), Juan Cruz Gallo (1235624) y Lautaro Cordoba (1235670).
 
 
-🛠️ Estructura del Código
-El archivo principal (TPO segundo parcial Version Final.py) se divide de manera modular en las siguientes secciones:
+Este programa fue desarrollado como trabajo practico obligatorio para la materia Pensamiento computacional,algoritmica y programacion. El objetivo fue construir un sistema de gestion de inventario para la empresar "UADETech Corp.", aplicando los conceptos vistos en clase.
+Esta completamente modularizado en funciones con responsabilidades claras, implementa los algoritmos manualmente y separa las validaciones del flujo principal del programa. Cada integrante del equipo tuvo un rol definido y el codigo refleja esa division de trabajo.
 
-Bloque / Sección,Descripción
-Variables Globales,"Bases de datos locales en listas (categorías, marcas y strings predefinidos para agilizar la carga de productos)."
+Bloque  Validaciones:
+        Bloque 1 Validaciones de texto: contiene las funciones que verifican que los datos ingresados por el usuario sean    correctos, como el identificador, la descripcion, la categoria y la marca.
+Tambien incluye las funciones de busqueda por ID y por nombre.
+ 
+        Bloque 2 - Validaciones numericas: verifica que el precio sea un decimal positivo y que el stock sea un entero mayor o igual a 1. Incluye tambien la generacion de IDs unicos y funciones auxiliares de soporte.
+Mostrar inventario: imprime el inventario en formato de tabla
+alineada. Incluye el ordenamiento por burbuja de mayor a menor
+stock, con desempate alfabetico por nombre.
+ 
+Agregar producto: registra un nuevo producto llamando a todas las validaciones antes de guardarlo en el inventario.
+ 
+Eliminar producto: permite dar de baja un producto unicamente si su stock es igual a cero, solicitando confirmacion previa.
+ 
+Modificar stock: busca el producto por nombre y permite sumar, restar o establecer el stock exacto.
+ 
+Modificar precio: busca el producto por ID y actualiza su precio validando que sea un decimal positivo.
+ 
+Buscar producto: permite buscar por nombre, categoria o marca mostrando los resultados encontrados.
+ 
+Menu principal: coordina el flujo general del programa mostrando las opciones al usuario y derivando a cada funcion segun la
+opcion seleccionada.
 
-Bloque 1: Validaciones de Texto,"Algoritmos para verificar IDs duplicados, descripciones válidas, marcas y formateo estricto de categorías (.capitalize())."
-
-Bloque 2: Validaciones Numéricas,Funciones que recorren los strings carácter por carácter para certificar si son números enteros o decimales legítimos (gestionando signos negativos y puntos flotantes).
-
-Lógica de Negocio y Utilidades,"Generación de IDs (ej: MON503 para un Monitor), búsquedas indexadas y ordenamiento de arrays."
-
-Funciones del Sistema (Módulos),"Funciones principales expuestas al usuario: agregar_producto, eliminar_producto, modificar_stock, modificar_precio e informe_general."
-
-Menú e Interfaz,El bucle principal (main()) que mantiene el programa corriendo y procesa la navegación del usuario.
+La metodologia de trabajo consistio en dividir el desarrollo en roles claros desde el inicio. Las validaciones se separaron en dos partes: un bloque de texto y uno numerico, cada uno con funciones especificas y probadas de forma independiente antes de integrarse al sistema. El resto del codigo, menu y stock, siguio la misma logica modular. Una vez que cada parte estuvo lista y probada, se realizo el merge integrando los bloques y verificando que funcionaran en conjunto. Este enfoque permitio detectar errores de forma aislada y facilito la comprension de cada parte del codigo durante la defensa.
