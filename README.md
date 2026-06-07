@@ -10,7 +10,9 @@ Bloque  Validaciones:
 Tambien incluye las funciones de busqueda por ID y por nombre.
  
         Bloque 2 - Validaciones numericas: verifica que el precio sea un decimal positivo y que el stock sea un entero mayor o igual a 1. Incluye tambien la generacion de IDs unicos y funciones auxiliares de soporte.
-Mostrar inventario: imprime el inventario en formato de tablaalineada. Incluye el ordenamiento por burbuja de mayor a menor stock, con desempate alfabetico por nombre.
+
+
+Mostrar inventario: imprime el inventario en formato de tabla alineada. Incluye el ordenamiento por burbuja de mayor a menor stock, con desempate alfabetico por nombre.
  
 Agregar producto: registra un nuevo producto llamando a todas las validaciones antes de guardarlo en el inventario.
  
