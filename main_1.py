@@ -2,7 +2,7 @@ import funciones_1 as fn
 
 
 def main():
-    # El inventario ahora son 6 listas paralelas, alineadas por indice.
+    # El inventario son 6 listas paralelas, alineadas por indice.
     ids        = []
     nombres    = []
     categorias = []
