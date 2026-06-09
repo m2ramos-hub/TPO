@@ -38,5 +38,4 @@ def main():
         fn.mostrar_menu()
         opcion = int(input("  Opcion: "))
     print("\n  Saliendo del sistema. Hasta luego!\n")
-if __name__ == "__main__":
-    main()
+main()
