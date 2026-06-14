@@ -1,6 +1,6 @@
 #Pro-Gamer Logistics
-import auxiliar_f as aux
-import funcion_f as fn
+import auxiliar_f2 as aux
+import funcion_f2 as fn
 
 # Colores
 rojo = "\033[31m"
