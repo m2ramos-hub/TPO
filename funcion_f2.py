@@ -3,7 +3,7 @@
 #Inventario hecho por Esteban Jumilla
 #Validaciones hechas por Manuel Dos Ramos y Juan Cruz Gallo
 
-import auxiliar_f as aux
+import auxiliar_f2 as aux
 
 # Colores
 rojo = "\033[31m"
